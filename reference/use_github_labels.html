@@ -15,21 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -38,22 +46,21 @@
 
 <!-- docsearch -->
 <script src="../docsearch.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
 <link href="../docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="Manage GitHub issue labels — use_github_labels" />
 
+<meta property="og:title" content="Manage GitHub issue labels — use_github_labels" />
 <meta property="og:description" content="use_github_labels() can create new labels, update colours and descriptions,
 and optionally delete GitHub's default labels (if delete_default = TRUE).
 It will never delete labels that have associated issues.
 use_tidy_labels() calls use_github_labels() with tidyverse conventions
-powered by tidy_labels(), tidy_labels_rename(), tidy_label_colours() and
-tidy_label_descriptions()." />
-
+powered by tidy_labels(), tidy_labels_rename(), tidy_label_colours()
+and tidy_label_descriptions()." />
 <meta property="og:image" content="https://usethis.r-lib.org/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -67,9 +74,20 @@ tidy_label_descriptions()." />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115082821-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115082821-1');
+</script>
+
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -83,7 +101,7 @@ tidy_label_descriptions()." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">usethis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.1.9000</span>
       </span>
     </div>
 
@@ -100,6 +118,18 @@ tidy_label_descriptions()." />
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/articles/pr-functions.html">Pull request helpers</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -125,17 +155,16 @@ tidy_label_descriptions()." />
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/r-lib/usethis">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/r-lib/usethis/">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul>
       
-      <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
         <div class="form-group">
           <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
         </div>
@@ -146,6 +175,7 @@ tidy_label_descriptions()." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -157,23 +187,30 @@ tidy_label_descriptions()." />
     </div>
 
     <div class="ref-description">
-    
     <p><code>use_github_labels()</code> can create new labels, update colours and descriptions,
 and optionally delete GitHub's default labels (if <code>delete_default = TRUE</code>).
 It will never delete labels that have associated issues.</p>
 <p><code>use_tidy_labels()</code> calls <code>use_github_labels()</code> with tidyverse conventions
-powered by <code>tidy_labels()</code>, <code>tidy_labels_rename()</code>, <code>tidy_label_colours()</code> and
-<code>tidy_label_descriptions()</code>.</p>
-    
+powered by <code>tidy_labels()</code>, <code>tidy_labels_rename()</code>, <code>tidy_label_colours()</code>
+and <code>tidy_label_descriptions()</code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>use_github_labels</span>(<span class='kw'>repo_spec</span> <span class='kw'>=</span> <span class='fu'>github_repo_spec</span>(), <span class='kw'>labels</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/character'>character</a></span>(),
-  <span class='kw'>rename</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/character'>character</a></span>(), <span class='kw'>colours</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/character'>character</a></span>(),
-  <span class='kw'>descriptions</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/character'>character</a></span>(), <span class='kw'>delete_default</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>auth_token</span> <span class='kw'>=</span> <span class='fu'><a href='browse_github_token.html'>github_token</a></span>(), <span class='kw'>host</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+    <pre class="usage"><span class='fu'>use_github_labels</span>(
+  <span class='kw'>repo_spec</span> <span class='kw'>=</span> <span class='fu'>github_repo_spec</span>(),
+  <span class='kw'>labels</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>(),
+  <span class='kw'>rename</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>(),
+  <span class='kw'>colours</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>(),
+  <span class='kw'>descriptions</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>(),
+  <span class='kw'>delete_default</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>auth_token</span> <span class='kw'>=</span> <span class='fu'><a href='browse_github_token.html'>github_token</a></span>(),
+  <span class='kw'>host</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+)
 
-<span class='fu'>use_tidy_labels</span>(<span class='kw'>repo_spec</span> <span class='kw'>=</span> <span class='fu'>github_repo_spec</span>(),
-  <span class='kw'>auth_token</span> <span class='kw'>=</span> <span class='fu'><a href='browse_github_token.html'>github_token</a></span>(), <span class='kw'>host</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)
+<span class='fu'>use_tidy_labels</span>(
+  <span class='kw'>repo_spec</span> <span class='kw'>=</span> <span class='fu'>github_repo_spec</span>(),
+  <span class='kw'>auth_token</span> <span class='kw'>=</span> <span class='fu'><a href='browse_github_token.html'>github_token</a></span>(),
+  <span class='kw'>host</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+)
 
 <span class='fu'>tidy_labels</span>()
 
@@ -182,7 +219,7 @@ powered by <code>tidy_labels()</code>, <code>tidy_labels_rename()</code>, <code>
 <span class='fu'>tidy_label_colours</span>()
 
 <span class='fu'>tidy_label_descriptions</span>()</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -198,7 +235,7 @@ don't want to target the current project.</p></td>
     <tr>
       <th>rename</th>
       <td><p>A named vector with names giving old names and values giving
-new values.</p></td>
+new names.</p></td>
     </tr>
     <tr>
       <th>colours, descriptions</th>
@@ -210,9 +247,8 @@ colour.</p></td>
     </tr>
     <tr>
       <th>delete_default</th>
-      <td><p>If <code>TRUE</code>, will remove GitHub default labels that do
-not appear in the <code>labels</code> vector, and do not have associated issues.
-to your workflow).</p></td>
+      <td><p>If <code>TRUE</code>, removes GitHub default labels that do
+not appear in the <code>labels</code> vector and that do not have associated issues.</p></td>
     </tr>
     <tr>
       <th>auth_token</th>
@@ -225,32 +261,33 @@ GitHub enterprise instance, for example,
 "https://github.hostname.com/api/v3".</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="label-usage"><a class="anchor" href="#label-usage"></a>Label usage</h2>
 
     
-    <p>Labels are used as part of the issue-triage process, designed to minimise the
+
+<p>Labels are used as part of the issue-triage process, designed to minimise the
 time spent re-reading issues. The absence of a label indicates that an issue
 is new, and has yet to be triaged.</p><ul>
 <li><p><code>reprex</code> indicates that an issue does not have a minimal reproducible
 example, and that a reply has been sent requesting one from the user.</p></li>
-<li><p><code>bug</code> type, indicates an unexpected problem or unintended behavior.</p></li>
-<li><p><code>feature</code> type, indicates a feature request or enhancement.</p></li>
-<li><p><code>docs</code> type, indicates an issue with the documentation.</p></li>
-<li><p><code>wip</code> indicates that someone else is working on it or has promised to.</p></li>
+<li><p><code>bug</code> indicates an unexpected problem or unintended behavior.</p></li>
+<li><p><code>feature</code> indicates a feature request or enhancement.</p></li>
+<li><p><code>docs</code> indicates an issue with the documentation.</p></li>
+<li><p><code>wip</code> indicates that someone is working on it or has promised to.</p></li>
 <li><p><code>good first issue</code> indicates a good issue for first-time contributors.</p></li>
 <li><p><code>help wanted</code> indicates that a maintainer wants help on an issue.</p></li>
 </ul>
-    
+
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='co'># typical use in, e.g., a new tidyverse project</span>
 <span class='fu'>use_github_labels</span>(<span class='kw'>delete_default</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
 <span class='co'># create labels without changing colours/descriptions</span>
 <span class='fu'>use_github_labels</span>(
-  <span class='kw'>labels</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"foofy"</span>, <span class='st'>"foofier"</span>, <span class='st'>"foofiest"</span>),
+  <span class='kw'>labels</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"foofy"</span>, <span class='st'>"foofier"</span>, <span class='st'>"foofiest"</span>),
   <span class='kw'>colours</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>descriptions</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
 )
@@ -259,22 +296,17 @@ example, and that a reply has been sent requesting one from the user.</p></li>
 <span class='fu'>use_github_labels</span>(
   <span class='kw'>labels</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>colours</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>descriptions</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"foofiest"</span> <span class='kw'>=</span> <span class='st'>"the foofiest issue you ever saw"</span>)
+  <span class='kw'>descriptions</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"foofiest"</span> <span class='kw'>=</span> <span class='st'>"the foofiest issue you ever saw"</span>)
 )
-<span class='co'># }</span></pre>
+}</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#label-usage">Label usage</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -282,8 +314,9 @@ example, and that a reply has been sent requesting one from the user.</p></li>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
@@ -306,6 +339,8 @@ example, and that a reply has been sent requesting one from the user.</p></li>
 </script>
 
 
+
   </body>
 </html>
+
 

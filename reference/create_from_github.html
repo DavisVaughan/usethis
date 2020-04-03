@@ -15,21 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -38,21 +46,20 @@
 
 <!-- docsearch -->
 <script src="../docsearch.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
 <link href="../docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="Create a project from a GitHub repo — create_from_github" />
 
+<meta property="og:title" content="Create a project from a GitHub repo — create_from_github" />
 <meta property="og:description" content="Creates a new local Git repository from a repository on GitHub. It is highly
 recommended that you pre-configure or pass a GitHub personal access token
 (PAT), which is facilitated by browse_github_token(). In particular, a PAT
 is required in order for create_from_github() to do &quot;fork and clone&quot;. It is also required
 by use_github(), which connects existing local projects to GitHub." />
-
 <meta property="og:image" content="https://usethis.r-lib.org/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -66,9 +73,20 @@ by use_github(), which connects existing local projects to GitHub." />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115082821-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115082821-1');
+</script>
+
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -82,7 +100,7 @@ by use_github(), which connects existing local projects to GitHub." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">usethis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.1.9000</span>
       </span>
     </div>
 
@@ -99,6 +117,18 @@ by use_github(), which connects existing local projects to GitHub." />
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/articles/pr-functions.html">Pull request helpers</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -124,17 +154,16 @@ by use_github(), which connects existing local projects to GitHub." />
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/r-lib/usethis">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/r-lib/usethis/">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul>
       
-      <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
         <div class="form-group">
           <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
         </div>
@@ -145,6 +174,7 @@ by use_github(), which connects existing local projects to GitHub." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -156,19 +186,25 @@ by use_github(), which connects existing local projects to GitHub." />
     </div>
 
     <div class="ref-description">
-    
     <p>Creates a new local Git repository from a repository on GitHub. It is highly
 recommended that you pre-configure or pass a GitHub personal access token
 (PAT), which is facilitated by <code><a href='browse_github_token.html'>browse_github_token()</a></code>. In particular, a PAT
 is required in order for <code>create_from_github()</code> to do <a href='https://help.github.com/articles/fork-a-repo/'>"fork and clone"</a>. It is also required
 by <code><a href='use_github.html'>use_github()</a></code>, which connects existing local projects to GitHub.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>create_from_github</span>(<span class='no'>repo_spec</span>, <span class='kw'>destdir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>fork</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
-  <span class='kw'>rstudio</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>open</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/interactive'>interactive</a></span>(), <span class='kw'>protocol</span> <span class='kw'>=</span> <span class='fu'><a href='git_protocol.html'>git_protocol</a></span>(),
-  <span class='kw'>credentials</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>auth_token</span> <span class='kw'>=</span> <span class='fu'><a href='browse_github_token.html'>github_token</a></span>(), <span class='kw'>host</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
-    
+    <pre class="usage"><span class='fu'>create_from_github</span>(
+  <span class='no'>repo_spec</span>,
+  <span class='kw'>destdir</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>fork</span> <span class='kw'>=</span> <span class='fl'>NA</span>,
+  <span class='kw'>rstudio</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>open</span> <span class='kw'>=</span> <span class='kw pkg'>rlang</span><span class='kw ns'>::</span><span class='fu'><a href='https://rlang.r-lib.org/reference/is_interactive.html'>is_interactive</a></span>(),
+  <span class='kw'>protocol</span> <span class='kw'>=</span> <span class='fu'><a href='git_protocol.html'>git_protocol</a></span>(),
+  <span class='kw'>credentials</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>auth_token</span> <span class='kw'>=</span> <span class='fu'><a href='browse_github_token.html'>github_token</a></span>(),
+  <span class='kw'>host</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
+)</pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -179,7 +215,11 @@ by <code><a href='use_github.html'>use_github()</a></code>, which connects exist
     </tr>
     <tr>
       <th>destdir</th>
-      <td><p>The new folder is stored here. Defaults to user's Desktop.</p></td>
+      <td><p>The new folder is stored here. If <code>NULL</code>, defaults to user's
+Desktop or some other conspicuous place. You can also set a default
+location using the option <code>usethis.destdir</code>, e.g.
+<code><a href='https://rdrr.io/r/base/options.html'>options(usethis.destdir = "a/good/dir")</a></code>, perhaps saved to your
+<code>.Rprofile</code> with <code><a href='edit.html'>edit_r_profile()</a></code></p></td>
     </tr>
     <tr>
       <th>fork</th>
@@ -188,9 +228,9 @@ by <code><a href='use_github.html'>use_github()</a></code>, which connects exist
 is provided or preconfigured. Otherwise, defaults to <code>FALSE</code> if you can
 push to <code>repo_spec</code> and <code>TRUE</code> if you cannot. In the case of a fork, the
 original target repo is added to the local repo as the <code>upstream</code> remote,
-using the preferred <code>protocol</code>. The <code>master</code> branch is immediately pulled
-from <code>upstream</code>, which matters in the case of a pre-existing, out-of-date
-fork.</p></td>
+using the preferred <code>protocol</code>. The <code>master</code> branch is set to track
+<code>upstream/master</code> and is immediately pulled, which matters in the case of a
+pre-existing, out-of-date fork.</p></td>
     </tr>
     <tr>
       <th>rstudio</th>
@@ -215,8 +255,8 @@ or, in non-interactive sessions, "ssh". <code>NA</code> triggers the interactive
     <tr>
       <th>credentials</th>
       <td><p>A git2r credential object produced with
-<code><a href='https://www.rdocumentation.org/packages/git2r/topics/cred_env'>git2r::cred_env()</a></code>, <code><a href='https://www.rdocumentation.org/packages/git2r/topics/cred_ssh_key'>git2r::cred_ssh_key()</a></code>, <code><a href='https://www.rdocumentation.org/packages/git2r/topics/cred_token'>git2r::cred_token()</a></code>, or
-<code><a href='https://www.rdocumentation.org/packages/git2r/topics/cred_user_pass'>git2r::cred_user_pass()</a></code>.</p></td>
+<code><a href='https://docs.ropensci.org/git2r/reference/cred_env.html'>git2r::cred_env()</a></code>, <code><a href='https://docs.ropensci.org/git2r/reference/cred_ssh_key.html'>git2r::cred_ssh_key()</a></code>, <code><a href='https://docs.ropensci.org/git2r/reference/cred_token.html'>git2r::cred_token()</a></code>, or
+<code><a href='https://docs.ropensci.org/git2r/reference/cred_user_pass.html'>git2r::cred_user_pass()</a></code>.</p></td>
     </tr>
     <tr>
       <th>auth_token</th>
@@ -229,32 +269,51 @@ GitHub enterprise instance, for example,
 "https://github.hostname.com/api/v3".</p></td>
     </tr>
     </table>
+
+    <h2 class="hasAnchor" id="using-ssh-keys-on-windows"><a class="anchor" href="#using-ssh-keys-on-windows"></a>Using SSH Keys on Windows</h2>
+
     
+
+<p>If you are a Windows user who connects to GitHub using SSH, as opposed to
+HTTPS, you may need to explicitly specify the paths to your keys and register
+this credential in the current R session. This helps if git2r, which usethis
+uses for Git operations, does not automatically find your keys or handle your
+passphrase.</p>
+<p>In the snippet below, do whatever is necessary to make the paths correct,
+e.g., replace <code>&lt;USERNAME&gt;</code> with your Windows username. Omit the <code>passphrase</code>
+part if you don't have one. Replace <code>&lt;OWNER/REPO&gt;</code> with the appropriate
+GitHub specification. You get the idea.</p><pre><span class='no'>creds</span> <span class='kw'>&amp;</span><span class='no'>lt</span>;- <span class='kw pkg'>git2r</span><span class='kw ns'>::</span><span class='fu'><a href='https://docs.ropensci.org/git2r/reference/cred_ssh_key.html'>cred_ssh_key</a></span>(
+  <span class='kw'>publickey</span>  <span class='kw'>=</span> <span class='st'>"C:/Users/&amp;lt;USERNAME&amp;gt;/.ssh/id_rsa.pub"</span>,
+  <span class='kw'>privatekey</span> <span class='kw'>=</span> <span class='st'>"C:/Users/&amp;lt;USERNAME&amp;gt;/.ssh/id_rsa"</span>,
+  <span class='kw'>passphrase</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>character</a></span>(<span class='fl'>0</span>)
+)
+<span class='fu'><a href='git_protocol.html'>use_git_protocol</a></span>(<span class='st'>"ssh"</span>)
+<span class='fu'><a href='git_credentials.html'>use_git_credentials</a></span>(<span class='kw'>credentials</span> <span class='kw'>=</span> <span class='no'>creds</span>)
+
+<span class='fu'>create_from_github</span>(
+  <span class='kw'>repo_spec</span> <span class='kw'>=</span> <span class='st'>"&amp;lt;OWNER/REPO&amp;gt;"</span>,
+  <span class='no'>...</span>
+)</pre>
+
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='use_github.html'>use_github()</a></code> for GitHub setup advice. <code><a href='git_protocol.html'>git_protocol()</a></code> and
 <code><a href='git_credentials.html'>git_credentials()</a></code> for background on <code>protocol</code> and <code>credentials</code>.
-<code><a href='use_course.html'>use_course()</a></code> for one-time download of all files in a Git repo, without
+<code><a href='zip-utils.html'>use_course()</a></code> for one-time download of all files in a Git repo, without
 any local or remote Git operations.</p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='fu'>create_from_github</span>(<span class='st'>"r-lib/usethis"</span>)
-<span class='co'># }</span></pre>
+}</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -262,8 +321,9 @@ any local or remote Git operations.</p></div>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
@@ -286,6 +346,8 @@ any local or remote Git operations.</p></div>
 </script>
 
 
+
   </body>
 </html>
+
 

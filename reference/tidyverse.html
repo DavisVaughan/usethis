@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Helpers for tidyverse development — tidyverse • usethis</title>
+<title>Helpers for tidyverse development — use_tidy_github_actions • usethis</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -15,21 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -38,19 +46,18 @@
 
 <!-- docsearch -->
 <script src="../docsearch.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
 <link href="../docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="Helpers for tidyverse development — tidyverse" />
 
+<meta property="og:title" content="Helpers for tidyverse development — use_tidy_github_actions" />
 <meta property="og:description" content="These helpers follow tidyverse conventions which are generally a little
 stricter than the defaults, reflecting the need for greater rigor in
 commonly used packages." />
-
 <meta property="og:image" content="https://usethis.r-lib.org/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -64,9 +71,20 @@ commonly used packages." />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115082821-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115082821-1');
+</script>
+
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -80,7 +98,7 @@ commonly used packages." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">usethis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.1.9000</span>
       </span>
     </div>
 
@@ -97,6 +115,18 @@ commonly used packages." />
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/articles/pr-functions.html">Pull request helpers</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -122,17 +152,16 @@ commonly used packages." />
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/r-lib/usethis">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/r-lib/usethis/">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul>
       
-      <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
         <div class="form-group">
           <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
         </div>
@@ -143,39 +172,38 @@ commonly used packages." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Helpers for tidyverse development</h1>
-    <small class="dont-index">Source: <a href='https://github.com/r-lib/usethis/blob/master/R/tidyverse.R'><code>R/tidyverse.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/r-lib/usethis/blob/master/R/github-actions.R'><code>R/github-actions.R</code></a>, <a href='https://github.com/r-lib/usethis/blob/master/R/tidyverse.R'><code>R/tidyverse.R</code></a></small>
     <div class="hidden name"><code>tidyverse.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>These helpers follow tidyverse conventions which are generally a little
 stricter than the defaults, reflecting the need for greater rigor in
 commonly used packages.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'>create_tidy_package</span>(<span class='no'>path</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='st'>"RStudio"</span>)
+    <pre class="usage"><span class='fu'>use_tidy_github_actions</span>()
 
-<span class='fu'>use_tidy_ci</span>(<span class='kw'>browse</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/interactive'>interactive</a></span>())
+<span class='fu'>create_tidy_package</span>(<span class='no'>path</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='st'>"RStudio"</span>)
+
+<span class='fu'>use_tidy_ci</span>(<span class='kw'>browse</span> <span class='kw'>=</span> <span class='kw pkg'>rlang</span><span class='kw ns'>::</span><span class='fu'><a href='https://rlang.r-lib.org/reference/is_interactive.html'>is_interactive</a></span>())
 
 <span class='fu'>use_tidy_description</span>()
-
-<span class='fu'>use_tidy_versions</span>(<span class='kw'>overwrite</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>source</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"local"</span>, <span class='st'>"CRAN"</span>))
 
 <span class='fu'>use_tidy_eval</span>()
 
 <span class='fu'>use_tidy_contributing</span>()
 
-<span class='fu'>use_tidy_issue_template</span>()
-
 <span class='fu'>use_tidy_support</span>()
+
+<span class='fu'>use_tidy_issue_template</span>()
 
 <span class='fu'>use_tidy_coc</span>()
 
@@ -184,7 +212,7 @@ commonly used packages.</p>
 <span class='fu'>use_tidy_style</span>(<span class='kw'>strict</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)
 
 <span class='fu'>use_tidy_release_test_env</span>()</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -197,7 +225,7 @@ created, provided that the parent path exists.</p></td>
       <th>name</th>
       <td><p>Name of the copyright holder or holders. Separate multiple
 individuals with <code>;</code>. You can supply a global default with
-<code><a href='https://www.rdocumentation.org/packages/base/topics/options'>options(usethis.full_name = "My name")</a></code>.</p></td>
+<code><a href='https://rdrr.io/r/base/options.html'>options(usethis.full_name = "My name")</a></code>.</p></td>
     </tr>
     <tr>
       <th>browse</th>
@@ -205,39 +233,41 @@ individuals with <code>;</code>. You can supply a global default with
 package.</p></td>
     </tr>
     <tr>
-      <th>overwrite</th>
-      <td><p>By default (<code>FALSE</code>), only dependencies without version
-specifications will be modified. Set to <code>TRUE</code> to modify all dependencies.</p></td>
-    </tr>
-    <tr>
-      <th>source</th>
-      <td><p>Use "local" or "CRAN" package versions.</p></td>
-    </tr>
-    <tr>
       <th>strict</th>
       <td><p>Boolean indicating whether or not a strict version of styling
-should be applied. See <code><a href='https://www.rdocumentation.org/packages/styler/topics/tidyverse_style'>styler::tidyverse_style()</a></code> for details.</p></td>
+should be applied. See <code><a href='https://rdrr.io/pkg/styler/man/tidyverse_style.html'>styler::tidyverse_style()</a></code> for details.</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <ul>
+    
+<ul>
+<li><p><code>use_tidy_github_actions()</code>: Sets up the following workflows using <a href='https://github.com/features/actions'>GitHub Actions</a>:</p><ul>
+<li><p>Runs <code>R CMD check</code> on the current release, devel, and four previous
+versions of R.</p></li>
+<li><p>Adds adds two commands to be used in pull requests: <code>/document</code> to run
+<code><a href='https://roxygen2.r-lib.org/reference/roxygenize.html'>roxygen2::roxygenise()</a></code> and update the PR, and <code>/style</code> to run
+<code><a href='https://rdrr.io/pkg/styler/man/style_pkg.html'>styler::style_pkg()</a></code> and update the PR.</p></li>
+<li><p>Builds a pkgdown site for the package.</p></li>
+</ul></li>
+</ul>
+
+<ul>
 <li><p><code>create_tidy_package()</code>: creates a new package, immediately applies as many
 of the tidyverse conventions as possible, issues a few reminders, and
 activates the new package.</p></li>
-<li><p><code>use_tidy_ci()</code>: sets up <a href='https://travis-ci.org'>Travis CI</a> and
-<a href='https://codecov.io'>Codecov</a>, ensuring that the package works on all
-versions of R starting at 3.1. It also ignores <code>compat-</code> and <code>deprec-</code>
+<li><p><code>use_tidy_ci()</code>: sets up <a href='https://travis-ci.com'>Travis CI</a> and
+<a href='https://codecov.io'>Codecov</a>, ensuring that the package is actively tested
+on the versions of R officially supported by the Tidyverse (current release,
+devel, and four previous versions). It also ignores <code>compat-</code> and <code>deprec-</code>
 files from code coverage.</p></li>
 <li><p><code>use_tidy_description()</code>: puts fields in standard order and alphabetises
 dependencies.</p></li>
 <li><p><code>use_tidy_eval()</code>: imports a standard set of helpers to facilitate
 programming with the tidy eval toolkit.</p></li>
-<li><p><code>use_tidy_style()</code>: styles source code according to the <a href='http://style.tidyverse.org'>tidyverse style guide</a>. This function will overwrite files! See
+<li><p><code>use_tidy_style()</code>: styles source code according to the <a href='https://style.tidyverse.org'>tidyverse style guide</a>. This function will overwrite files! See
 below for usage advice.</p></li>
-<li><p><code>use_tidy_versions()</code>: pins all dependencies to require at least
-the currently installed version.</p></li>
 <li><p><code>use_tidy_contributing()</code>: adds standard tidyverse contributing guidelines.</p></li>
 <li><p><code>use_tidy_issue_template()</code>: adds a standard tidyverse issue template.</p></li>
 <li><p><code>use_tidy_release_test_env()</code>: updates the test environment section in
@@ -250,32 +280,27 @@ document in a <code>.github/</code> subdirectory.</p></li>
 <code>use_tidy_contributing()</code>, <code>use_tidy_issue_template()</code>, <code>use_tidy_support()</code>,
 <code>use_tidy_coc()</code>.</p></li>
 </ul>
-    
+
     <h2 class="hasAnchor" id="use-tidy-style-"><a class="anchor" href="#use-tidy-style-"></a><code>use_tidy_style()</code></h2>
 
     
-    <p>Uses the <a href='http://styler.r-lib.org'>styler package</a> package to style all code
-in a package, project, or directory, according to the <a href='http://style.tidyverse.org'>tidyverse style guide</a>.</p>
+
+<p>Uses the <a href='https://styler.r-lib.org'>styler package</a> package to style all code
+in a package, project, or directory, according to the <a href='https://style.tidyverse.org'>tidyverse style guide</a>.</p>
 <p><strong>Warning:</strong> This function will overwrite files! It is strongly suggested to
 only style files that are under version control or to first create a backup
 copy.</p>
 <p>Invisibly returns a data frame with one row per file, that indicates whether
 styling caused a change.</p>
-    
 
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#use-tidy-style-"><code>use_tidy_style()</code></a></li>
-          </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -283,8 +308,9 @@ styling caused a change.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
@@ -307,6 +333,8 @@ styling caused a change.</p>
 </script>
 
 
+
   </body>
 </html>
+
 

@@ -15,21 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="bootstrap-toc.css">
+<script src="bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="pkgdown.css" rel="stylesheet">
@@ -38,15 +46,15 @@
 
 <!-- docsearch -->
 <script src="docsearch.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
 <link href="docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="usethis design principles" />
 
+<meta property="og:title" content="usethis design principles" />
 <meta property="og:image" content="https://usethis.r-lib.org/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -60,9 +68,20 @@
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115082821-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115082821-1');
+</script>
+
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-title-body">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +95,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">usethis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.1.9000</span>
       </span>
     </div>
 
@@ -93,6 +112,18 @@
 </li>
 <li>
   <a href="reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="articles/articles/pr-functions.html">Pull request helpers</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -118,17 +149,16 @@
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/r-lib/usethis">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/r-lib/usethis/">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul>
       
-      <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
         <div class="form-group">
           <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
         </div>
@@ -139,6 +169,7 @@
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -153,18 +184,18 @@
 <div id="active-project" class="section level2">
 <h2 class="hasAnchor">
 <a href="#active-project" class="anchor"></a>Active project</h2>
-<p>Many usethis functions act on the <strong>active project</strong>, the path to which is stored in the internal environment <code>proj</code>, specifically in <code>proj$cur</code>. We do this instead of constantly passing around a base path or relying on the working directory. It is implied that such functions create or modify files inside the active project. This is mostly true of <code>use_*()</code> functions, though there are exceptions. For example, <code><a href="reference/use_course.html">use_course()</a></code> makes no reference to the active project.</p>
-<p>The project is activated upon first need, i.e. eventually some function calls <code><a href="reference/proj_utils.html">proj_get()</a></code> and, if <code>proj$cur</code> is <code>NULL</code>, we attempt to activate a project at (or above) current working directory.</p>
+<p>Many usethis functions act on the <strong>active project</strong>, the path to which is stored in the internal environment <code>proj</code>, specifically in <code>proj$cur</code>. We do this instead of constantly passing around a base path or relying on the working directory. It is implied that such functions create or modify files inside the active project. This is mostly true of <code>use_*()</code> functions, though there are exceptions. For example, <code><a href="reference/zip-utils.html">use_course()</a></code> makes no reference to the active project.</p>
+<p>The project is activated upon first need, i.e.Â eventually some function calls <code><a href="reference/proj_utils.html">proj_get()</a></code> and, if <code>proj$cur</code> is <code>NULL</code>, we attempt to activate a project at (or above) current working directory.</p>
 <p>Direct read/write of <code>proj$cur</code> should be rare. Even internally, <code><a href="reference/proj_utils.html">proj_get()</a></code> and <code><a href="reference/proj_utils.html">proj_set()</a></code> are preferred. The stored project path should be processed with <code>proj_path_prep()</code>.</p>
 <p>Form paths to files within the project with <code><a href="reference/proj_utils.html">proj_path()</a></code>. Get paths relative to the project with <code>proj_rel_path()</code>.</p>
-<div id="activation-upon-load-or-attach-no-" class="section level3">
+<div id="activation-upon-load-or-attach-no" class="section level3">
 <h3 class="hasAnchor">
-<a href="#activation-upon-load-or-attach-no-" class="anchor"></a>Activation upon load or attach? No.</h3>
-<p>We’ve contemplated project activation in <code><a href="https://www.rdocumentation.org/packages/base/topics/ns-hooks">.onLoad()</a></code> or <code><a href="https://www.rdocumentation.org/packages/base/topics/ns-hooks">.onAttach()</a></code>, but it’s not clear which is more appropriate. Which suggests that neither is appropriate. If we ever do this, <code>zzz.R</code> would include something like this:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">.onLoad &lt;-<span class="st"> </span><span class="cf">function</span>(libname, pkgname) {</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">  <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/try">try</a></span>(<span class="kw"><a href="reference/proj_utils.html">proj_set</a></span>(<span class="st">"."</span>, <span class="dt">quiet =</span> <span class="ot">TRUE</span>), <span class="dt">silent =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">}</a></code></pre></div>
-<p>Why not <code><a href="https://www.rdocumentation.org/packages/base/topics/ns-hooks">.onAttach()</a></code>?</p>
+<a href="#activation-upon-load-or-attach-no" class="anchor"></a>Activation upon load or attach? No.</h3>
+<p>Weâve contemplated project activation in <code><a href="https://rdrr.io/r/base/ns-hooks.html">.onLoad()</a></code> or <code><a href="https://rdrr.io/r/base/ns-hooks.html">.onAttach()</a></code>, but itâs not clear which is more appropriate. Which suggests that neither is appropriate. If we ever do this, <code>zzz.R</code> would include something like this:</p>
+<div class="sourceCode" id="cb1"><html><pre class="r"><span class="no">.onLoad</span> <span class="kw">&lt;-</span> <span class="kw">function</span>(<span class="no">libname</span>, <span class="no">pkgname</span>) {
+  <span class="fu"><a href="https://rdrr.io/r/base/try.html">try</a></span>(<span class="fu"><a href="reference/proj_utils.html">proj_set</a></span>(<span class="st">"."</span>, <span class="kw">quiet</span> <span class="kw">=</span> <span class="fl">TRUE</span>), <span class="kw">silent</span> <span class="kw">=</span> <span class="fl">TRUE</span>)
+}</pre></html></div>
+<p>Why not <code><a href="https://rdrr.io/r/base/ns-hooks.html">.onAttach()</a></code>?</p>
 <ul>
 <li>A package that imported usethis would also need to set project on attach.</li>
 <li>Currently user can open R, attach (or load) usethis, and then change working directory to their target project. As long as they are in the project the first time <code><a href="reference/proj_utils.html">proj_get()</a></code> is called, the correct project will be made active. This is not our preferred workflow, but it is common.</li>
@@ -175,23 +206,23 @@
 <h2 class="hasAnchor">
 <a href="#helper-functions" class="anchor"></a>Helper functions</h2>
 <p>With some ambivalence, internally-oriented helpers like <code><a href="reference/write-this.html">write_union()</a></code> are exported. This helps developers who are extending usethis to create a package to standardize project setup within their own organization.</p>
-<p>The downside is that we aren’t exactly sure yet what we’re willing to guarantee about these helpers.</p>
+<p>The downside is that we arenât exactly sure yet what weâre willing to guarantee about these helpers.</p>
 <div id="permission-to-overwrite" class="section level3">
 <h3 class="hasAnchor">
 <a href="#permission-to-overwrite" class="anchor"></a>Permission to overwrite</h3>
-<p><code><a href="reference/write-this.html">write_over()</a></code> returns <code>FALSE</code> and does nothing if there is no need to overwrite (proposed file contents are same as existing) or if user says “no” and returns <code>TRUE</code> if it ovewrites. So if downstream logic depends on whether something new was written, consult the return value. <code><a href="reference/write-this.html">write_over()</a></code> is rarely called directly, but is usually called via <code><a href="reference/use_template.html">use_template()</a></code>, in which case the same handling should apply to its return value.</p>
+<p><code><a href="reference/write-this.html">write_over()</a></code> returns <code>FALSE</code> and does nothing if there is no need to overwrite (proposed file contents are same as existing) or if user says ânoâ and returns <code>TRUE</code> if it ovewrites. So if downstream logic depends on whether something new was written, consult the return value. <code><a href="reference/write-this.html">write_over()</a></code> is rarely called directly, but is usually called via <code><a href="reference/use_template.html">use_template()</a></code>, in which case the same handling should apply to its return value.</p>
 </div>
 <div id="helpers-and-the-active-project" class="section level3">
 <h3 class="hasAnchor">
 <a href="#helpers-and-the-active-project" class="anchor"></a>Helpers and the active project</h3>
-<p>Current mindset: helpers should <em>not</em> make direct use of the active project, i.e. project-based paths should be formed by the caller.</p>
+<p>Current mindset: helpers should <em>not</em> make direct use of the active project, i.e.Â project-based paths should be formed by the caller.</p>
 <p>Uncomfortable fact: <code><a href="reference/write-this.html">write_union()</a></code> uses the active project, if such exists, to create a humane path in its message. However, unlike <code>use_*()</code> functions, it does not call <code><a href="reference/proj_utils.html">proj_get()</a></code> to set an active project when <code>proj$cur</code> is <code>NULL</code>. We like this behaviour but the design feels muddy.</p>
 </div>
 </div>
 <div id="home-directory" class="section level2">
 <h2 class="hasAnchor">
 <a href="#home-directory" class="anchor"></a>Home directory</h2>
-<p>usethis relies on fs for file system operations. The main thing users will notice is the treatment of home directory on Windows. A Windows user’s home directory is interpreted as <code>C:\Users\username</code> (typical of Unix-oriented tools, like Git and ssh; also matches Python), as opposed to <code>C:\Users\username\Documents</code> (R’s default on Windows). In order to be consistent everywhere, all paths supplied by the user should be processed with <code>user_path_prep()</code>.</p>
+<p>usethis relies on fs for file system operations. The main thing users will notice is the treatment of home directory on Windows. A Windows userâs home directory is interpreted as <code>C:\Users\username</code> (typical of Unix-oriented tools, like Git and ssh; also matches Python), as opposed to <code>C:\Users\username\Documents</code> (Râs default on Windows). In order to be consistent everywhere, all paths supplied by the user should be processed with <code>user_path_prep()</code>.</p>
 </div>
 <div id="communicating-with-the-user" class="section level2">
 <h2 class="hasAnchor">
@@ -200,13 +231,13 @@
 <p><code>cat_line()</code> has a <code>quiet</code> argument and <code>quiet = TRUE</code> causes it to not produce output. Default value: <code>quiet = getOption("usethis.quiet", default = FALSE)</code>.</p>
 <ul>
 <li>Exploited in usethis tests: option is set and unset in <code>setup.R</code> and <code>teardown.R</code>. Eliminates the need for ubiquitous <code>capture_output()</code> calls.</li>
-<li>Other packages can muffle a usethis call via, e.g., <code><a href="https://www.rdocumentation.org/packages/withr/topics/with_options">withr::local_options(list(usethis.quiet = TRUE))</a></code>.</li>
+<li>Other packages can muffle a usethis call via, e.g., <code><a href="https://rdrr.io/pkg/withr/man/with_options.html">withr::local_options(list(usethis.quiet = TRUE))</a></code>.</li>
 </ul>
-<p>Implication: don’t call <code>cat_line(..., quiet = FALSE)</code> lightly, because it breaks the expectation that the option can be used to silence usethis.</p>
-<p>You might also notice that usethis communicates with the user via <code><a href="https://www.rdocumentation.org/packages/base/topics/cat">cat()</a></code> instead of <code><a href="https://www.rdocumentation.org/packages/base/topics/message">message()</a></code>. Why?</p>
+<p>Implication: donât call <code>cat_line(..., quiet = FALSE)</code> lightly, because it breaks the expectation that the option can be used to silence usethis.</p>
+<p>You might also notice that usethis communicates with the user via <code><a href="https://rdrr.io/r/base/cat.html">cat()</a></code> instead of <code><a href="https://rdrr.io/r/base/message.html">message()</a></code>. Why?</p>
 <ul>
-<li>Pragmatic explanation: default styling of <code><a href="https://www.rdocumentation.org/packages/base/topics/message">message()</a></code> (at least in RStudio) is red, which suggests that something is wrong. We prefer default styling to be more neutral and less alarmist.</li>
-<li>Principled explanation: if one diverts where various streams go, <code><a href="https://www.rdocumentation.org/packages/base/topics/cat">cat()</a></code> follows printed output, whereas <code><a href="https://www.rdocumentation.org/packages/base/topics/message">message()</a></code> goes to standard error.</li>
+<li>Pragmatic explanation: default styling of <code><a href="https://rdrr.io/r/base/message.html">message()</a></code> (at least in RStudio) is red, which suggests that something is wrong. We prefer default styling to be more neutral and less alarmist.</li>
+<li>Principled explanation: if one diverts where various streams go, <code><a href="https://rdrr.io/r/base/cat.html">cat()</a></code> follows printed output, whereas <code><a href="https://rdrr.io/r/base/message.html">message()</a></code> goes to standard error.</li>
 </ul>
 </div>
 <div id="git" class="section level2">
@@ -216,9 +247,9 @@
 <ul>
 <li>
 <code>master</code> is the main default branch.</li>
-<li>If you’ve got only one remote, it’s called <code>origin</code>.</li>
-<li>If you’ve got multiple remotes, one of them is <code>origin</code> and it is the main default remote.</li>
-<li>If you’ve forked something, you have at least two remotes:
+<li>If youâve got only one remote, itâs called <code>origin</code>.</li>
+<li>If youâve got multiple remotes, one of them is <code>origin</code> and it is the main default remote.</li>
+<li>If youâve forked something, you have at least two remotes:
 <ul>
 <li>
 <code>origin</code> is your copy.</li>
@@ -227,14 +258,21 @@
 </ul>
 </li>
 </ul>
-<p>We assume a user habitually uses one transport protocol, either SSH or HTTPS, i.e. that they don’t intentionally switch between them willy-nilly.</p>
-<p>If the default summoning of Git credentials or protocol or GitHub PAT doesn’t work for you, you must set them explicitly via <code><a href="reference/git_credentials.html">use_git_credentials()</a></code>, <code><a href="reference/git_protocol.html">use_git_protocol()</a></code>, or <code><a href="https://www.rdocumentation.org/packages/base/topics/Sys.setenv">Sys.setenv("GITHUB_PAT")</a></code>. We aren’t going to offer fine control of this, everywhere, by repetitively offering a ton of function arguments.</p>
+<p>We assume a user habitually uses one transport protocol, either SSH or HTTPS, i.e.Â that they donât intentionally switch between them willy-nilly.</p>
+<p>If the default summoning of Git credentials or protocol or GitHub PAT doesnât work for you, you must set them explicitly via <code><a href="reference/git_credentials.html">use_git_credentials()</a></code>, <code><a href="reference/git_protocol.html">use_git_protocol()</a></code>, or <code><a href="https://rdrr.io/r/base/Sys.setenv.html">Sys.setenv("GITHUB_PAT")</a></code>. We arenât going to offer fine control of this, everywhere, by repetitively offering a ton of function arguments.</p>
 </div>
 </div>
 
   </div>
 
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
+  </div>
+
 </div>
+
 
 
       <footer>
@@ -243,8 +281,9 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
@@ -267,6 +306,8 @@
 </script>
 
 
+
   </body>
 </html>
+
 

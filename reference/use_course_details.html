@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Download and unpack a ZIP file — use_course_details • usethis</title>
+<title>Helpers to download and unpack a ZIP file — use_course_details • usethis</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -15,21 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -38,19 +46,17 @@
 
 <!-- docsearch -->
 <script src="../docsearch.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.1/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/docsearch.js/2.6.3/docsearch.min.css" integrity="sha256-QOSRU/ra9ActyXkIBbiIB144aDBdtvXBcNc3OTNuX/Q=" crossorigin="anonymous" />
 <link href="../docsearch.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
 
 
-<meta property="og:title" content="Download and unpack a ZIP file — use_course_details" />
 
-<meta property="og:description" content="Details on the two functions that power use_course(). These internal
-functions are currently unexported but a course instructor may want more
-details." />
-
+<meta property="og:title" content="Helpers to download and unpack a ZIP file — use_course_details" />
+<meta property="og:description" content="Details on the internal and helper functions that power use_course() and
+use_zip(). Only create_download_url() is exported." />
 <meta property="og:image" content="https://usethis.r-lib.org/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -64,9 +70,20 @@ details." />
 <![endif]-->
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115082821-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115082821-1');
+</script>
+
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -80,7 +97,7 @@ details." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">usethis</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.5.1.9000</span>
       </span>
     </div>
 
@@ -97,6 +114,18 @@ details." />
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/articles/pr-functions.html">Pull request helpers</a>
+    </li>
+  </ul>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -122,17 +151,16 @@ details." />
   </ul>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/r-lib/usethis">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/r-lib/usethis/">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
       </ul>
       
-      <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right hidden-xs hidden-sm" role="search">
         <div class="form-group">
           <input type="search" class="form-control" name="search-input" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
         </div>
@@ -143,65 +171,59 @@ details." />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Download and unpack a ZIP file</h1>
+    <h1>Helpers to download and unpack a ZIP file</h1>
     <small class="dont-index">Source: <a href='https://github.com/r-lib/usethis/blob/master/R/course.R'><code>R/course.R</code></a></small>
     <div class="hidden name"><code>use_course_details.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
-    <p>Details on the two functions that power <code><a href='use_course.html'>use_course()</a></code>. These internal
-functions are currently unexported but a course instructor may want more
-details.</p>
-    
+    <p>Details on the internal and helper functions that power <code><a href='zip-utils.html'>use_course()</a></code> and
+<code><a href='zip-utils.html'>use_zip()</a></code>. Only <code>create_download_url()</code> is exported.</p>
     </div>
 
-    
+    <pre class="usage"><span class='fu'>create_download_url</span>(<span class='no'>url</span>)</pre>
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>url</th>
-      <td><p>Download link for the ZIP file, possibly behind a shortlink or
-other redirect. See Details.</p></td>
+      <td><p>a GitHub, DropBox, or Google Drive URL, as copied from a web
+browser.</p></td>
     </tr>
     <tr>
       <th>destdir</th>
       <td><p>Path to existing local directory where the ZIP file will be
-stored. Defaults to current working directory, but note that <code><a href='use_course.html'>use_course()</a></code>
+stored. Defaults to current working directory, but note that <code><a href='zip-utils.html'>use_course()</a></code>
 has different default behavior.</p></td>
-    </tr>
-    <tr>
-      <th>pedantic</th>
-      <td><p>Logical. When <code>TRUE</code> and in an interactive session, the user
-is told where the ZIP file will be stored. If happy, user can elect to
-proceed. Otherwise, user can abort and try again with the desired
-<code>destdir</code>. Intentional friction for a pedagogical setting.</p></td>
     </tr>
     <tr>
       <th>zipfile</th>
       <td><p>Path to local ZIP file.</p></td>
     </tr>
     </table>
-    
-    <h2 class="hasAnchor" id="download-zip-"><a class="anchor" href="#download-zip-"></a>download_zip()</h2>
 
-    <pre>## function signature
-download_zip(url, destdir = getwd(), pedantic = FALSE)
-    ## as called inside use_course()
-download_zip(
-  url, ## after post-processing with normalize_url()
-  ## conspicuous_place() = Desktop or home directory or working directory
-  destdir = destdir %||% conspicuous_place(),
-  pedantic = is.null(destdir) &amp;&amp; interactive()
-)
-</pre>
-    <p>Special-purpose function to download a ZIP file and automatically determine
+    <h2 class="hasAnchor" id="tidy-download-"><a class="anchor" href="#tidy-download-"></a>tidy_download()</h2>
+
+    
+<pre><span class='co'>## function signature</span>
+<span class='fu'>tidy_download</span>(<span class='no'>url</span>, <span class='kw'>destdir</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>getwd</a></span>())
+
+<span class='co'># as called inside use_course()</span>
+<span class='fu'>tidy_download</span>(
+  <span class='no'>url</span>, <span class='co'>## after post-processing with normalize_url()</span>
+  <span class='co'># conspicuous_place() = `getOption('usethis.destdir')` or desktop or home</span>
+  <span class='co'># directory or working directory</span>
+  <span class='kw'>destdir</span> <span class='kw'>=</span> <span class='no'>destdir</span> <span class='kw'>%||%</span> <span class='fu'>conspicuous_place</span>()
+)</pre>
+
+<p>Special-purpose function to download a ZIP file and automatically determine
 the file name, which often determines the folder name after unpacking.
 Developed with DropBox and GitHub as primary targets, possibly via
 shortlinks. Both platforms offer a way to download an entire folder or repo
@@ -209,34 +231,66 @@ as a ZIP file, with information about the original folder or repo transmitted
 in the <code>Content-Disposition</code> header. In the absence of this header, a
 filename is generated from the input URL. In either case, the filename is
 sanitized. Returns the path to downloaded ZIP file, invisibly.</p>
-<p><strong>DropBox:</strong></p>
+<p><code>tidy_download()</code> is setup to retry after a download failure. In an
+interactive session, it asks for user's consent. All retries use a longer
+connect timeout.</p><h3>DropBox</h3>
+
+
 <p>To make a folder available for ZIP download, create a shared link for it:</p><ul>
 <li><p><a href='https://www.dropbox.com/help/files-folders/view-only-access'>https://www.dropbox.com/help/files-folders/view-only-access</a></p></li>
 </ul>
-    <p>A shared link will have this form:</p><pre>https://www.dropbox.com/sh/12345abcde/6789wxyz?dl=0
+
+<p>A shared link will have this form:</p><pre>https://www.dropbox.com/sh/12345abcde/6789wxyz?dl=0
 </pre>
-    <p>Replace the <code>dl=0</code> at the end with <code>dl=1</code> to create a download link. The ZIP
-download link will have this form:</p><pre>https://www.dropbox.com/sh/12345abcde/6789wxyz?dl=1
+
+<p>Replace the <code>dl=0</code> at the end with <code>dl=1</code> to create a download link:</p><pre>https://www.dropbox.com/sh/12345abcde/6789wxyz?dl=1
 </pre>
-    <p>This download link (or a shortlink that points to it) is suitable as input
-for <code>download_zip()</code>. After one or more redirections, this link will
+
+<p>You can use <code>create_download_url()</code> to do this conversion.</p>
+<p>This download link (or a shortlink that points to it) is suitable as input
+for <code>tidy_download()</code>. After one or more redirections, this link will
 eventually lead to a download URL. For more details, see
 <a href='https://www.dropbox.com/help/desktop-web/force-download'>https://www.dropbox.com/help/desktop-web/force-download</a> and
 <a href='https://www.dropbox.com/en/help/desktop-web/download-entire-folders'>https://www.dropbox.com/en/help/desktop-web/download-entire-folders</a>.</p>
-<p><strong>GitHub:</strong></p>
+
+<h3>GitHub</h3>
+
+
 <p>Click on the repo's "Clone or download" button, to reveal a "Download ZIP"
 button. Capture this URL, which will have this form:</p><pre>https://github.com/r-lib/usethis/archive/master.zip
 </pre>
-    <p>This download link (or a shortlink that points to it) is suitable as input
-for <code>download_zip()</code>. After one or more redirections, this link will
+
+<p>This download link (or a shortlink that points to it) is suitable as input
+for <code>tidy_download()</code>. After one or more redirections, this link will
 eventually lead to a download URL. Here's an alternative link that also leads
 to ZIP download, albeit with a different filenaming scheme:</p><pre>https://api.github.com/repos/r-lib/usethis/zipball/master
 </pre>
-    
+
+<p>You can use <code>create_download_url()</code> to create the "Download ZIP" URL from
+a typical GitHub browser URL.</p>
+
+<h3>Google Drive</h3>
+
+
+<p>To our knowledge, it is not possible to download a Google Drive folder as a
+ZIP archive. It is however possible to share a ZIP file stored on Google
+Drive. To get its URL, click on "Get the shareable link" (within the "Share"
+menu). This URL doesn't allow for direct download, as it's designed to be
+processed in a web browser first. Such a sharing link looks like:</p><pre>https://drive.google.com/open?id=123456789xxyyyzzz
+</pre>
+
+<p>To be able to get the URL suitable for direct download, you need to extract
+the "id" element from the URL and include it in this URL format:</p><pre>https://drive.google.com/uc?export=download&amp;id=123456789xxyyyzzz
+</pre>
+
+<p>Use <code>create_download_url()</code> to perform this transformation automatically.</p>
+
     <h2 class="hasAnchor" id="tidy-unzip-"><a class="anchor" href="#tidy-unzip-"></a>tidy_unzip()</h2>
 
     
-    <p>Special-purpose function to unpack a ZIP file and (attempt to) create the
+
+
+<p>Special-purpose function to unpack a ZIP file and (attempt to) create the
 directory structure most people want. When unpacking an archive, it is easy
 to get one more or one less level of nesting than you expected.</p>
 <p>It's especially important to finesse the directory structure here: we want
@@ -249,44 +303,38 @@ Typical of DropBox ZIP files.</p></li>
 the way, is not necessarily called "foo"), unpack into said directory.
 Typical of GitHub ZIP files.</p></li>
 </ul>
-    <p>Returns path to the directory holding the unpacked files, invisibly.</p>
+
+<p>Returns path to the directory holding the unpacked files, invisibly.</p>
 <p><strong>DropBox:</strong>
 The ZIP files produced by DropBox are special. The file list tends to contain
-a spurious directory <code>"/"</code>, which we ignore during unzip. Also, if the
+a spurious directory <code><a href='https://rdrr.io/r/base/Arithmetic.html'>"/"</a></code>, which we ignore during unzip. Also, if the
 directory is a Git repo and/or RStudio Project, we unzip-ignore various
 hidden files, such as <code>.RData</code>, <code>.Rhistory</code>, and those below <code>.git/</code> and
 <code>.Rproj.user</code>.</p>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p>Other download functions: <code><a href='use_course.html'>use_course</a></code></p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'>download_zip</span>(<span class='st'>"https://github.com/r-lib/rematch2/archive/master.zip"</span>)
-<span class='co'># }</span><div class='input'>
-</div><span class='co'># NOT RUN {</span>
-<span class='fu'>download_zip</span>(<span class='st'>"https://github.com/r-lib/rematch2/archive/master.zip"</span>)
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>tidy_download</span>(<span class='st'>"https://github.com/r-lib/rematch2/archive/master.zip"</span>)
+}
+
+<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'>tidy_download</span>(<span class='st'>"https://github.com/r-lib/rematch2/archive/master.zip"</span>)
 <span class='fu'>tidy_unzip</span>(<span class='st'>"rematch2-master.zip"</span>)
-<span class='co'># }</span></pre>
+}
+<span class='co'># GitHub</span>
+<span class='fu'>create_download_url</span>(<span class='st'>"https://github.com/r-lib/usethis"</span>)</div><div class='output co'>#&gt; https://github.com/r-lib/usethis/archive/master.zip</div><div class='input'><span class='fu'>create_download_url</span>(<span class='st'>"https://github.com/r-lib/usethis/issues"</span>)</div><div class='output co'>#&gt; https://github.com/r-lib/usethis/archive/master.zip</div><div class='input'>
+<span class='co'># DropBox</span>
+<span class='fu'>create_download_url</span>(<span class='st'>"https://www.dropbox.com/sh/12345abcde/6789wxyz?dl=0"</span>)</div><div class='output co'>#&gt; [1] "https://www.dropbox.com/sh/12345abcde/6789wxyz?dl=1"</div><div class='input'>
+<span class='co'># Google Drive</span>
+<span class='fu'>create_download_url</span>(<span class='st'>"https://drive.google.com/open?id=123456789xxyyyzzz"</span>)</div><div class='output co'>#&gt; https://drive.google.com/uc?export=download&amp;id=123456789xxyyyzzz</div><div class='input'><span class='fu'>create_download_url</span>(<span class='st'>"https://drive.google.com/open?id=123456789xxyyyzzz/view"</span>)</div><div class='output co'>#&gt; https://drive.google.com/uc?export=download&amp;id=123456789xxyyyzzz</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#download-zip-">download_zip()</a></li>
-
-      <li><a href="#tidy-unzip-">tidy_unzip()</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -294,8 +342,9 @@ hidden files, such as <code>.RData</code>, <code>.Rhistory</code>, and those bel
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.0.9000.</p>
 </div>
+
       </footer>
    </div>
 
@@ -318,6 +367,8 @@ hidden files, such as <code>.RData</code>, <code>.Rhistory</code>, and those bel
 </script>
 
 
+
   </body>
 </html>
+
 
